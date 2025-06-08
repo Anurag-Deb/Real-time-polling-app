@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Polling App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ Real-Time Polling Platform</h1>
+            <p>Create interactive polls and engage your audience in real-time</p>
+        </div>
+
+        <div class="main-content">
+            <div class="admin-panel">
+                <h2 class="panel-title">👨‍💼 Admin Panel</h2>
+                
+                <div class="form-group">
+                    <label for="pollQuestion">Poll Question:</label>
+                    <textarea id="pollQuestion" rows="3" placeholder="Enter your poll question here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Poll Options:</label>
+                    <div id="optionsContainer">
+                        <input type="text" class="poll-option-input" placeholder="Option 1" data-index="0">
+                        <input type="text" class="poll-option-input" placeholder="Option 2" data-index="1">
+                    </div>
+                    <button class="btn btn-secondary" onclick="addOption()">+ Add Option</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="pollTimer">Timer (minutes):</label>
+                    <select id="pollTimer">
+                        <option value="0">No Timer</option>
+                        <option value="1">1 minute</option>
+                        <option value="2">2 minutes</option>
+                        <option value="5">5 minutes</option>
+                        <option value="10">10 minutes</option>
+                    </select>
+                </div>
+
+                <button class="btn" onclick="createPoll()" id="createPollBtn">🚀 Launch Poll</button>
+                <button class="btn btn-danger" onclick="endPoll()" id="endPollBtn" disabled>⏹️ End Poll</button>
+
+                <div id="sessionInfo" style="display: none;">
+                    <div class="session-code">
+                        <p>Session Code:</p>
+                        <strong id="sessionCode"></strong>
+                    </div>
+                    <div id="timerDisplay" class="timer" style="display: none;">
+                        Time Remaining: <span id="timeRemaining"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="user-panel">
+                <h2 class="panel-title">👥 Join Session</h2>
+                
+                <div class="form-group">
+                    <label for="userSessionCode">Enter Session Code:</label>
+                    <input type="text" id="userSessionCode" placeholder="Enter 6-digit code">
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional):</label>
+                    <input type="text" id="userName" placeholder="Enter your name">
+                </div>
+
+                <button class="btn" onclick="joinSession()" id="joinBtn">🔗 Join Session</button>
+
+                <div id="userPollSection" style="display: none;">
+                    <div id="userStatusMessage"></div>
+                    <h3 id="userPollQuestion"></h3>
+                    <div id="userPollOptions" class="poll-options"></div>
+                    <button class="btn" onclick="submitVote()" id="submitVoteBtn" disabled>✅ Submit Vote</button>
+                </div>
+            </div>
+        </div>
+        <div class="results-section">
+            <h2 class="panel-title">📊 Live Results</h2>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalVotes">0</div>
+                    <div class="stat-label">Total Votes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="activeUsers">0</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="sessionStatus">Inactive</div>
+                    <div class="stat-label">Session Status</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>📝 Session History</h3>
+                <div id="sessionHistory" class="history">
+                    <p style="text-align: center; color: #666;">No sessions yet. Create a poll to get started!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
