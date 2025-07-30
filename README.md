@@ -1,7 +1,7 @@
 # Real-time-polling-app
 A responsive and interactive real-time polling web application built using HTML, CSS, and JavaScript. Users can create polls, vote instantly, and view live vote updates without refreshing the page.
 
-**🚀 Features**
+<u>**🚀 Features**</u>
 - Create custom polls with multiple options
 
 - Real-time vote updates using dynamic DOM manipulation
@@ -12,13 +12,14 @@ A responsive and interactive real-time polling web application built using HTML,
 
 - Lightweight and fast with no external libraries or frameworks
 
-**📁 Tech Stack**
+<u>**📁 Tech Stack**</u>
 - HTML
 
 - CSS
 
-- JavaScript 
-**📦 Getting Started**
+- JavaScript
+ 
+<u>**📦 Getting Started**</u>
 - Clone the repository
 
    `git clone https://github.com/your-username/real-time-polling-app.git`
