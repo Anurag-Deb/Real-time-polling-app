@@ -1,6 +1,8 @@
 # Real-time-polling-app
 A responsive and interactive real-time polling web application built using HTML, CSS, and JavaScript. Users can create polls, vote instantly, and view live vote updates without refreshing the page.
 
+![ScreenShot](https://github.com/Anurag-Deb/Real-time-polling-app/blob/main/Screenshot%202025-08-06%20000331.png?raw=true)
+
 ### **🚀 Features**
 - Create custom polls with multiple options
 
