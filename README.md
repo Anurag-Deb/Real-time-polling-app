@@ -4,6 +4,7 @@ A responsive and interactive real-time polling web application built using HTML,
 ![ScreenShot](https://github.com/Anurag-Deb/Real-time-polling-app/blob/main/Screenshot%202025-08-06%20000331.png?raw=true)
 
 ### **🚀 Features**
+---
 - Create custom polls with multiple options
 
 - Real-time vote updates using dynamic DOM manipulation
@@ -15,6 +16,7 @@ A responsive and interactive real-time polling web application built using HTML,
 - Lightweight and fast with no external libraries or frameworks
 
 ### **📁 Tech Stack**
+---
 - HTML
 
 - CSS
@@ -22,6 +24,7 @@ A responsive and interactive real-time polling web application built using HTML,
 - JavaScript
  
 ### **📦 Getting Started**
+---
 - Clone the repository
 
    `git clone https://github.com/your-username/real-time-polling-app.git`
